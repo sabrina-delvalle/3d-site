@@ -4,18 +4,18 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="h-screen">
-      <header className="h-16 flex items-center gap-6 mx-16 my-5">
+      <header className="h-16 flex items-center gap-6 mx-5 md:mx-16 my-5">
         <Link href="/">
           {" "}
           <Image src="/amaranth-logo.png" alt="logo" width={70} height={70} />
         </Link>
 
-        <ul className="text-neutral-700 flex-auto flex justify-end gap-4 content-center p-2 font-extralight">
+        <ul className="text-neutral-700 flex-auto flex justify-end gap-2 md:gap-4 content-center p-2 font-extralight">
           <a href="/login">Sing In</a> / <a href="/sign-up">Sign Up</a>
         </ul>
       </header>
       <main className="justify-center items-center flex flex-col">
-        <h1 className="w-3/5 mt-12 font-thin rounded-full from-neutral-600 text-stone-700 text-7xl justify-center content-start flex">
+        <h1 className="w-3/5 mt-12 font-thin rounded-full from-neutral-600 text-stone-700 text-7xl justify-center content-start flex flex-wrap md:flex-nowrap">
           {" "}
           Some 3D Models You Can{" "}
           <p className="text-pink-700 font-extrabold">, Find!</p>
@@ -24,7 +24,7 @@ export default function Home() {
           className="w-4/6 h-12 mt-14 mb-2 text-2xl font-extralight p-7 rounded-full border border-zinc-400"
           placeholder="Search..."
         ></input>
-        <ul className="flex gap-6 m-14 text-white">
+        <ul className="flex flex-wrap content-center items-center md:flex-nowrap gap-2 md:gap-6 m-11 md:m-14 text-white">
           <li className="bg-pink-700 rounded-full px-10 py-3 cursor-pointer hover:opacity-70">
             Furniture
           </li>
@@ -50,9 +50,9 @@ export default function Home() {
 
         <div className="flex flex-col justify-center content-center items-center">
           {/* Grid starting */}
-          <div className="grid grid-cols-4 gap-16 rounded-br-lg rounded-bl-lg justify-center my-16 [350px]:flex [350px]:flex-col">
+          <div className="gap-16 rounded-br-lg rounded-bl-lg justify-center my-16 flex flex-col md:grid md:grid-cols-2 md:gap-16 lg:grid lg:grid-cols-4">
             {/* Element starting */}
-            <div className="flex flex-col content-center rounded-2xl border-2 border-zinc-300">
+            <div className="flex flex-col content-center item rounded-2xl border-2 border-zinc-300">
               <div className="h-[500px] w-[400px] relative">
                 <Image
                   className="rounded-t-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
@@ -200,7 +200,7 @@ export default function Home() {
 
         <div className="flex flex-col justify-center content-center items-center">
           {/* Grid starting */}
-          <div className="grid grid-cols-4 gap-16 rounded-br-lg rounded-bl-lg justify-center my-16">
+          <div className="gap-16 rounded-br-lg rounded-bl-lg justify-center my-16 flex flex-col md:grid md:grid-cols-2 md:gap-16 lg:grid lg:grid-cols-4">
             {/* Element starting */}
             <div className="flex flex-col content-center rounded-2xl border-2 border-zinc-300">
               <div className="h-[500px] w-[400px] relative">
@@ -349,14 +349,14 @@ export default function Home() {
         </div>
 
         <div className="bg-zinc-700 flex flex-col justify-center content-center items-center w-full">
-          <p className="bg-zinc-700 text-white text-9xl font-bold mr-[1500px] my-24 mb-36 w-36">
+          <p className="bg-zinc-700 text-white text-6xl mr-[200px] md:text-9xl font-bold md:mr-[1500px] my-24 mb-36 w-36">
             Magage your 3D files...
           </p>
         </div>
 
         <div className="flex flex-col justify-center content-center items-center">
           {/* Grid starting */}
-          <div className="grid grid-cols-4 gap-16 rounded-br-lg rounded-bl-lg justify-center my-16">
+          <div className="gap-16 rounded-br-lg rounded-bl-lg justify-center my-16 flex flex-col md:grid md:grid-cols-2 md:gap-16 lg:grid lg:grid-cols-4">
             {/* Element starting */}
             <div className="flex flex-col content-center rounded-2xl border-2 border-zinc-300">
               <div className="h-[500px] w-[400px] relative">
@@ -506,7 +506,7 @@ export default function Home() {
 
         <div className="flex flex-col justify-center content-center items-center">
           {/* Grid starting */}
-          <div className="grid grid-cols-4 gap-16 rounded-br-lg rounded-bl-lg justify-center my-16">
+          <div className="gap-16 rounded-br-lg rounded-bl-lg justify-center my-16 flex flex-col md:grid md:grid-cols-2 md:gap-16 lg:grid lg:grid-cols-4">
             {/* Element starting */}
             <div className="flex flex-col content-center rounded-2xl border-2 border-zinc-300">
               <div className="h-[500px] w-[400px] relative">
@@ -660,26 +660,26 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row gap-32 my-28">
-          <div className="h-[800px] w-[500px] relative">
+        <div className="flex flex-col items-center py-36 md:flex-row gap-32 my-28 bg-zinc-700 w-full justify-center">
+          <div className="h-[600px] w-[500px] md:h-[800px] md:w-[500px] relative">
             <Image
-              className="rounded-t-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
+              className="rounded-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
               src="/1.png"
               alt="logo"
               fill
             ></Image>
           </div>
-          <div className="h-[800px] w-[500px] relative">
+          <div className="h-[600px] w-[500px] md:h-[800px] md:w-[500px] relative">
             <Image
-              className="rounded-t-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
+              className="rounded-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
               src="/3.jpg"
               alt="logo"
               fill
             ></Image>
           </div>
-          <div className="h-[800px] w-[500px] relative">
+          <div className="h-[600px] w-[500px] md:h-[800px] md:w-[500px] relative">
             <Image
-              className="rounded-t-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
+              className="rounded-2xl object-cover flex items-center justify-center cursor-pointer hover:opacity-80"
               src="/7.jpg"
               alt="logo"
               fill
@@ -687,11 +687,11 @@ export default function Home() {
           </div>
         </div>
 
-        <p className="text-zinc-600 text-9xl font-bold w-36 mr-[1500px] my-24 mb-36">
+        <p className="text-zinc-600 text-6xl md:text-9xl font-bold w-5 md:w-36 mr-[300px] md:mr-[1500px] my-24 mb-40">
           You can find more...
         </p>
       </main>
-      <footer className="bg-neutral-800 row-start-3 flex gap-6 flex-wrap items-center justify-center h-1/4 text-slate-200 flex-col mt-10">
+      <footer className="bg-neutral-800 row-start-3 font-thin flex gap-6 flex-wrap items-center justify-center h-1/4 text-slate-200 flex-col mt-10">
         <p>content-center cursor-pointer rounded-2xl border</p>
         is.sabrinadelvalle@gmail.com
       </footer>
